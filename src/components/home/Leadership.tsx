@@ -11,10 +11,10 @@ import Link from "next/link";
 const leaders = [
   {
     id: "visionaries",
-    name: "Mr. SR Laul & Late Shri CS Gupta",
-    role: "Founding Visionaries",
+    name: "Late Shri CS Gupta",
+    role: "Founding Visionary",
     image: cloudinary("images/founders.png"),
-    bio: "The visionary founders who laid the foundation of Lauls Ltd. in 1933. Mr. SR Laul and Late Shri CS Gupta brought together decades of industrial expertise to create a company that would become a cornerstone of India's railway manufacturing and logistics landscape.",
+    bio: "The visionary founder who laid the foundation of Lauls Ltd. in 1933. Late Shri CS Gupta brought together decades of industrial expertise to create a company that would become a cornerstone of India's railway manufacturing and logistics landscape.",
     achievements: [
       "Established Lauls Ltd. in 1933",
       "Pioneered RDSO-certified manufacturing",
@@ -143,7 +143,7 @@ export default function Leadership() {
                 <div className="flex items-center gap-2 mb-6">
                   <div className="w-2 h-2 rounded-full bg-accent" />
                   <span className="text-accent font-display font-bold uppercase tracking-widest text-[10px]">
-                    {activeLeader.id === "visionaries" ? "Founding Visionaries" : "Board of Directors"}
+                    {activeLeader.id === "visionaries" ? "Founding Visionary" : "Board of Directors"}
                   </span>
                 </div>
 

@@ -3,9 +3,11 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { cloudinary } from "@/utils/cloudinary";
 
 export default function EVHero() {
+  const router = useRouter();
   return (
     <section className="relative w-full h-[100svh] min-h-[700px] flex flex-col justify-center overflow-hidden">
       {/* Immersive Background Layer - EV/Green Logistics */}
@@ -49,7 +51,7 @@ export default function EVHero() {
             transition={{ delay: 0.2 }}
             className="text-white/80 text-base md:text-xl mb-8 md:mb-12 leading-relaxed font-light max-w-2xl"
           >
-            Pioneering the largest private rollout of heavy-duty electric commercial vehicles in India. We are decarbonizing the industrial backbone without compromising on payload capacity or range.
+            Pioneering the largest private rollout of heavy-duty electric commercial vehicles in India alongside LNG and CNG assets. We have committed to transitioning to a 100% diesel-free green fleet by 2027.
           </motion.p>
 
           <motion.div
@@ -58,9 +60,33 @@ export default function EVHero() {
              transition={{ delay: 0.3 }}
              className="flex flex-wrap gap-4 mb-10 md:mb-20"
           >
-            <button className="px-8 py-4 bg-emerald-500 text-white font-bold hover:bg-emerald-400 transition-all text-sm flex items-center gap-2 group rounded-sm shadow-xl shadow-emerald-500/20">
+            <a
+              href="#ev-details"
+              onClick={(e) => {
+                e.preventDefault();
+                const target = document.getElementById("ev-details");
+                if (target) {
+                  target.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+              className="px-8 py-4 bg-emerald-500 text-white font-bold hover:bg-emerald-400 transition-all text-sm flex items-center gap-2 group rounded-sm shadow-xl shadow-emerald-500/20 cursor-pointer"
+            >
               Explore EV Capabilities <ArrowRight size={16} className="text-white group-hover:translate-x-1 transition-transform" />
-            </button>
+            </a>
+            <a
+              href="#contact-form"
+              onClick={(e) => {
+                e.preventDefault();
+                router.replace("/electric-truck?product=truck", { scroll: false });
+                const target = document.getElementById("contact-form");
+                if (target) {
+                  target.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+              className="px-8 py-4 bg-white/5 backdrop-blur-sm border border-white/20 text-white font-bold hover:bg-white/10 hover:border-white/40 transition-all text-sm rounded-sm cursor-pointer inline-flex items-center"
+            >
+              EV Inquiry
+            </a>
           </motion.div>
 
           <motion.div

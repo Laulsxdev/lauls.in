@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { cloudinary } from "@/utils/cloudinary";
 
 const initiatives = [
@@ -15,18 +16,23 @@ const initiatives = [
       { label: "Impact", value: "5,000+ Students Annually" },
       { label: "Focus", value: "STEM & Vocational" },
     ],
-    link: "Read Education Report"
+    link: "Read Education Report",
+    tab: "education",
+    path: "/csr/details"
   },
   {
     title: "Environmental Sustainability",
-    subtitle: "Aggressive decarbonization",
-    desc: "Beyond strictly adhering to EPA regulations, Lauls Ltd is actively investing in captive solar power plants and large-scale afforestation drives to offset the carbon footprint of our steel operations.",
+    subtitle: "Aggressive decarbonization & Green Logistics",
+    desc: "Beyond strictly adhering to EPA regulations, Lauls Ltd is actively investing in captive solar power plants, large-scale afforestation, and green transportation. We are pioneering the shift to EV, LNG, and CNG trucks, committing to a 100% diesel-free logistics fleet by 2027.",
     image: cloudinary("images/solar.jpg"),
     chips: [
       { label: "Renewables", value: "25MW Captive Solar" },
       { label: "Ecology", value: "2M Trees Planted" },
+      { label: "Green Fleet", value: "100% EV/LNG/CNG by 2027" },
     ],
-    link: "View Sustainability Report"
+    link: "View Sustainability Report",
+    tab: "esg",
+    path: "/logistics/details"
   },
   {
     title: "Community Healthcare",
@@ -37,13 +43,15 @@ const initiatives = [
       { label: "Facilities", value: "4 Primary Care Centers" },
       { label: "Outreach", value: "Monthly Health Camps" },
     ],
-    link: "Read Healthcare Impact"
+    link: "Read Healthcare Impact",
+    tab: "healthcare",
+    path: "/csr/details"
   }
 ];
 
 export default function CSRPillars() {
   return (
-    <section className="bg-[#fcf8f6] py-32 w-full">
+    <section id="csr-pillars" className="bg-[#fcf8f6] py-32 w-full">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Header */}
         <div className="text-center w-full max-w-2xl mx-auto mb-24">
@@ -78,6 +86,7 @@ export default function CSRPillars() {
                     src={initiative.image}
                     alt={initiative.title}
                     fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-700"
                   />
                   <div className="absolute inset-0 bg-[#0A1628]/10" />
@@ -121,9 +130,12 @@ export default function CSRPillars() {
                 </div>
 
                 {/* Call to action */}
-                <button className="flex items-center gap-2 text-[#DCA54C] font-bold border-b-2 border-transparent hover:border-[#DCA54C] pb-1 transition-all w-max group">
+                <Link 
+                  href={`${initiative.path}?tab=${initiative.tab}`}
+                  className="flex items-center gap-2 text-[#DCA54C] font-bold border-b-2 border-transparent hover:border-[#DCA54C] pb-1 transition-all w-max group"
+                >
                   {initiative.link} <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform" />
-                </button>
+                </Link>
               </motion.div>
             </div>
           ))}

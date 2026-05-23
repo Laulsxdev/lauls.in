@@ -16,18 +16,8 @@ const services = [
       { label: "Coverage", value: "All Indian States" },
       { label: "Cargo Types", value: "Bulk, Over-Dimensional" },
     ],
-    link: "Explore Road Logistics"
-  },
-  {
-    title: "Rail Freight Operations",
-    subtitle: "Bulk material movement at scale",
-    desc: "For unparalleled scale, Lauls Ltd operates dedicated railway sidings to mobilize tens of thousands of tons of raw material across the continent efficiently and affordably.",
-    image: cloudinary("lauls image/IMG_9916.JPG"),
-    chips: [
-      { label: "Capacity", value: "Mass Bulk Freight" },
-      { label: "Network", value: "Direct Port/Mill Connect" },
-    ],
-    link: "Explore Rail Freight"
+    link: "Explore Road Logistics",
+    tab: "road"
   },
   {
     title: "Zero-Emission EV Transport",
@@ -38,7 +28,8 @@ const services = [
       { label: "Emissions", value: "Net-Zero Fleet" },
       { label: "Use Case", value: "Sustainable Mid-Mile" },
     ],
-    link: "View ESG Initiatives"
+    link: "View ESG Initiatives",
+    tab: "esg"
   },
   {
     title: "Strategic Warehousing",
@@ -49,7 +40,8 @@ const services = [
       { label: "Facilities", value: "12 Distribution Hubs" },
       { label: "Services", value: "JIT, Inventory Management" },
     ],
-    link: "View Hub Locations"
+    link: "View Hub Locations",
+    tab: "warehousing"
   }
 ];
 
@@ -133,7 +125,7 @@ export default function LogisticsServices() {
                 </div>
 
                 {/* Call to action */}
-                <Link href="/logistics/details" className="flex items-center gap-2 text-[#DCA54C] font-bold border-b-2 border-transparent hover:border-[#DCA54C] pb-1 transition-all w-max group">
+                <Link href={`/logistics/details?tab=${service.tab}`} className="flex items-center gap-2 text-[#DCA54C] font-bold border-b-2 border-transparent hover:border-[#DCA54C] pb-1 transition-all w-max group">
                   {service.link} <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform" />
                 </Link>
               </motion.div>

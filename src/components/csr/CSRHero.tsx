@@ -58,9 +58,19 @@ export default function CSRHero() {
              transition={{ delay: 0.3 }}
              className="flex flex-wrap gap-4 mb-10 md:mb-20"
           >
-            <button className="px-8 py-4 bg-[#DCA54C] text-[#0A1628] font-bold hover:bg-[#c5923b] transition-all text-sm flex items-center gap-2 group rounded-sm shadow-xl shadow-[#DCA54C]/20">
+            <a
+              href="#csr-pillars"
+              onClick={(e) => {
+                e.preventDefault();
+                const target = document.getElementById("csr-pillars");
+                if (target) {
+                  target.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+              className="px-8 py-4 bg-[#DCA54C] text-[#0A1628] font-bold hover:bg-[#c5923b] transition-all text-sm flex items-center gap-2 group rounded-sm shadow-xl shadow-[#DCA54C]/20 cursor-pointer inline-flex"
+            >
               Read CSR Report <ArrowRight size={16} className="text-[#0A1628] group-hover:translate-x-1 transition-transform" />
-            </button>
+            </a>
           </motion.div>
 
           <motion.div 

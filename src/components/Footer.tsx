@@ -109,7 +109,7 @@ export default function Footer() {
             <h4 className="text-xl font-display font-bold text-white mb-2">Ready to discuss your requirements?</h4>
             <p className="text-white/60 text-sm">Get in touch with our experts for custom industrial and EV supply chain solutions.</p>
           </div>
-          <Link href="/contact" className="px-6 py-3 bg-highlight text-[#0A1628] font-bold rounded-lg hover:bg-[#c5923b] transition-all text-sm whitespace-nowrap shadow-lg">
+          <Link href="/contact#contact-form" className="px-6 py-3 bg-highlight text-[#0A1628] font-bold rounded-lg hover:bg-[#c5923b] transition-all text-sm whitespace-nowrap shadow-lg">
             Request Industrial Consultation
           </Link>
         </div>

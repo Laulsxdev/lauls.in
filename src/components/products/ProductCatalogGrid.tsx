@@ -120,7 +120,7 @@ export default function ProductCatalogGrid({ onClose }: ProductCatalogGridProps)
               <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
-              href="/contact"
+              href="/contact#contact-form"
               onClick={() => onClose?.()}
               className="text-xs font-semibold text-[#DCA54C]/80 hover:text-[#DCA54C] border border-[#DCA54C]/20 hover:border-[#DCA54C]/50 px-4 py-1.5 rounded-full transition-all"
             >

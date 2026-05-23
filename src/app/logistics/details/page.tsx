@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import LogisticsDetailsPage from "@/components/logistics/LogisticsDetailsPage";
 
 export const metadata: Metadata = {
@@ -15,5 +16,9 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <LogisticsDetailsPage />;
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-[#0A1628] flex items-center justify-center text-white">Loading...</div>}>
+      <LogisticsDetailsPage />
+    </Suspense>
+  );
 }

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { cloudinary } from "@/utils/cloudinary";
 
 const evDetails = [
@@ -21,7 +22,7 @@ const evDetails = [
     title: "Decarbonized Supply Chains",
     subtitle: "Scope 3 Emission Reduction",
     desc: "By integrating our electric fleet into your logistics network, Lauls Ltd directly and drastically reduces your corporate Scope 3 emissions. Track your exact carbon offset through our rigorous, transparent ESG reporting.",
-    image: cloudinary("images/IMG_9974.JPG"),
+    image: cloudinary("lauls image/image copy 12.png"),
     chips: [
       { label: "Impact", value: "Zero Scope 1 Emissions" },
       { label: "Reporting", value: "Real-time ESG Dashboards" },
@@ -43,7 +44,7 @@ const evDetails = [
 
 export default function EVFleetDetails() {
   return (
-    <section className="bg-white py-32 w-full">
+    <section id="ev-details" className="bg-white py-32 w-full">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Header */}
         <div className="text-center w-full max-w-2xl mx-auto mb-24">
@@ -121,9 +122,9 @@ export default function EVFleetDetails() {
                 </div>
 
                 {/* Call to action */}
-                <button className="flex items-center gap-2 text-emerald-600 font-bold border-b-2 border-transparent hover:border-emerald-500 pb-1 transition-all w-max group">
+                <Link href="/logistics/details?tab=esg" className="flex items-center gap-2 text-emerald-600 font-bold border-b-2 border-transparent hover:border-emerald-500 pb-1 transition-all w-max group">
                   {detail.link} <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform" />
-                </button>
+                </Link>
               </motion.div>
             </div>
           ))}

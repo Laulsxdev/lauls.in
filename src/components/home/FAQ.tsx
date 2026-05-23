@@ -23,7 +23,7 @@ const faqs = [
   },
   {
     question: "What is your approach to sustainable transport?",
-    answer: "We are pioneering sustainable transport with our expanding fleet of electric trucks, significantly reducing carbon footprints and promoting eco-friendly practices in heavy industry operations.",
+    answer: "We are actively transitioning our logistics operations to an eco-friendly fleet. By integrating EV, LNG, and CNG heavy vehicles, we have pledged to become 100% diesel-free by 2027 to ensure zero-tailpipe emission transport.",
     tags: ["Eco-Fleet", "Zero Emission", "Sustainability"]
   },
   {
