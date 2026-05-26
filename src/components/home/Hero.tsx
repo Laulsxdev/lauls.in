@@ -48,7 +48,7 @@ const slides = [
     title: "Transitioning to \na Diesel-Free \nGreen Fleet",
     highlight: "Green Fleet",
     subtext: "Decarbonizing industrial logistics in India by transitioning our heavy-duty operations to a 100% EV, LNG, and CNG fleet by 2027.",
-    image: cloudinary("lauls image/image copy 12.png"),
+    image: "https://res.cloudinary.com/dnsviaxr1/image/upload/v1779832576/Gemini_Generated_Image_8qzqxc8qzqxc8qzq_1_ruzkpf.png",
     stats: [
       { label: "Clean Fuels", value: "EV/LNG/CNG" },
       { label: "Target Transition", value: "100% by 2027" },

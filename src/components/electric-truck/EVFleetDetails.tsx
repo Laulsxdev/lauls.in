@@ -22,7 +22,7 @@ const evDetails = [
     title: "Decarbonized Supply Chains",
     subtitle: "Scope 3 Emission Reduction",
     desc: "By integrating our electric fleet into your logistics network, Lauls Ltd directly and drastically reduces your corporate Scope 3 emissions. Track your exact carbon offset through our rigorous, transparent ESG reporting.",
-    image: cloudinary("lauls image/image copy 12.png"),
+    image: "https://res.cloudinary.com/dnsviaxr1/image/upload/v1779833323/Gemini_Generated_Image_oh2boroh2boroh2b_g0utxl.png",
     chips: [
       { label: "Impact", value: "Zero Scope 1 Emissions" },
       { label: "Reporting", value: "Real-time ESG Dashboards" },
