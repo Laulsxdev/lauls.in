@@ -368,7 +368,7 @@ export default function AboutContact() {
                 className="absolute bottom-2 left-[25%] w-[50%] h-[75%] rounded-2xl overflow-hidden shadow-2xl border border-white/10 cursor-pointer select-none"
               >
                 <Image
-                  src={cloudinary("images/stockyard-lauls.jpg")}
+                  src={cloudinary("images/IMG_9956.JPG")}
                   alt="Steel Stockyard"
                   fill
                   sizes="15vw"

@@ -45,15 +45,15 @@ const slides = [
     ]
   },
   {
-    title: "Pioneering \nSustainable \nElectric Trucking",
-    highlight: "Electric Trucking",
-    subtext: "Transitioning to a greener future with our electric truck fleet. Logistics engineered for sustainability and efficiency.",
+    title: "Transitioning to \na Diesel-Free \nGreen Fleet",
+    highlight: "Green Fleet",
+    subtext: "Decarbonizing industrial logistics in India by transitioning our heavy-duty operations to a 100% EV, LNG, and CNG fleet by 2027.",
     image: cloudinary("lauls image/image copy 12.png"),
     stats: [
-      { label: "Zero Emission", value: "100%" },
-      { label: "Sustainable", value: "Eco-Friendly" },
-      { label: "Future Ready", value: "Innovation" },
-      { label: "Leadership", value: "Driven" },
+      { label: "Clean Fuels", value: "EV/LNG/CNG" },
+      { label: "Target Transition", value: "100% by 2027" },
+      { label: "Telemetry", value: "AI Optimized" },
+      { label: "Decarbonization", value: "Scope 3" },
     ]
   }
 ];
@@ -223,7 +223,7 @@ export default function Hero() {
           >
             <span className={`hidden md:block absolute right-14 text-[10px] font-bold tracking-widest uppercase transition-all duration-300 whitespace-nowrap ${currentSlide === idx ? "opacity-100 text-white translate-x-0" : "opacity-0 text-white/30 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-white/60"
               }`}>
-              {idx === 0 ? "About Lauls" : idx === 1 ? "Steel Distribution" : idx === 2 ? "Logistics" : "Electric Truck"}
+              {idx === 0 ? "About Lauls" : idx === 1 ? "Steel Distribution" : idx === 2 ? "Logistics" : "Green Fleet"}
             </span>
             <div className={`w-[3px] md:w-auto md:h-[3px] rounded-full transition-all duration-500 ${currentSlide === idx ? "h-12 md:h-auto md:w-16 bg-highlight shadow-[0_0_8px_rgba(245,158,11,0.6)]" : "h-6 md:h-auto md:w-8 bg-white/30 group-hover:bg-white/60"
               }`} />

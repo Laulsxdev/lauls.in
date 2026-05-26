@@ -39,6 +39,17 @@ const evDetails = [
       { label: "Telemetry", value: "AI-Routed Checkpoints" },
     ],
     link: "View Charging Map"
+  },
+  {
+    title: "Long-Haul Alternative Fuels",
+    subtitle: "Complementary LNG & CNG Fleets",
+    desc: "To bridge the range gap in interstate transportation, we deploy clean-burning Liquefied Natural Gas (LNG) and Compressed Natural Gas (CNG) commercial vehicles. These heavy trucks deliver 800km+ ranges and reduce CO2 emissions by up to 30% compared to diesel, serving as a critical bridge in our 2027 zero-diesel roadmap.",
+    image: cloudinary("images/IMG_9999.JPG"),
+    chips: [
+      { label: "Operational Range", value: "800km+ on Single Fill" },
+      { label: "Carbon Reduction", value: "Up to 30% CO2 Reduction" },
+    ],
+    link: "View Transit Corridors"
   }
 ];
 

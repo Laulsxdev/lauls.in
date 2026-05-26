@@ -78,14 +78,14 @@ export default function Pillars() {
             </div>
           </div>
 
-          {/* 6. EV Trucks */}
+          {/* 6. Green Fleet */}
           <div className="col-span-1 bg-white rounded-[3rem] shadow-[0_20px_50px_-10px_rgba(0,0,0,0.06)] overflow-hidden flex flex-col relative z-20 hover:-translate-y-2 transition-transform duration-500 border border-white/60 h-full min-h-[360px]">
             <div className="h-[200px] lg:h-[220px] relative w-full border-b border-gray-50">
-              <Image src={cloudinary("lauls image/image copy 4.png")} fill sizes="(max-width: 1024px) 100vw, 25vw" placeholder="blur" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+ip1sAAAAASUVORK5CYII=" className="object-cover" alt="Electric Logistics Truck" />
+              <Image src={cloudinary("lauls image/image copy 4.png")} fill sizes="(max-width: 1024px) 100vw, 25vw" placeholder="blur" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+ip1sAAAAASUVORK5CYII=" className="object-cover" alt="Green Logistics Fleet EV LNG CNG" />
             </div>
             <div className="p-8 flex-1 flex flex-col justify-center bg-white">
-              <h3 className="text-xl font-bold text-[#0A1628] mb-2">EV Logistics</h3>
-              <p className="text-gray-600 text-sm">Sustainable transport solutions leveraging zero-emission EV fleets.</p>
+              <h3 className="text-xl font-bold text-[#0A1628] mb-2">Green Fleet</h3>
+              <p className="text-gray-600 text-sm">Decarbonizing logistics through zero-emission heavy EVs and clean LNG/CNG engines.</p>
             </div>
           </div>
 

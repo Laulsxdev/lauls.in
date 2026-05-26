@@ -226,7 +226,7 @@ export default function ContactPage() {
             {/* Right Column: Animated Overlapping Image Showcase */}
             <div className="w-full lg:col-span-5 relative h-[360px] xs:h-[420px] lg:h-[380px] xl:h-[440px] flex items-center justify-center">
               
-              {/* Image 1: Steel Stockyard (Top-Left) - Animates sliding from the left/top */}
+              {/* Image 1: Steel Stockyard Operations (Top-Left) - Animates sliding from the left/top */}
               <motion.div
                 initial={{ opacity: 0, x: -60, y: -20 }}
                 animate={{ opacity: 1, x: 0, y: 0 }}
@@ -235,8 +235,8 @@ export default function ContactPage() {
                 className="absolute top-0 left-0 w-[58%] h-[60%] rounded-3xl overflow-hidden shadow-2xl border border-white/10 z-10 cursor-pointer"
               >
                 <Image
-                  src={cloudinary("images/stockyard-lauls.jpg")}
-                  alt="Steel Stockyard Operations"
+                  src={cloudinary("images/IMG_9927.JPG")}
+                  alt="Steel Warehouse Operations"
                   fill
                   priority
                   sizes="(max-width: 1024px) 45vw, 25vw"
@@ -254,8 +254,8 @@ export default function ContactPage() {
                 className="absolute bottom-0 right-0 w-[63%] h-[65%] rounded-3xl overflow-hidden shadow-2xl border-2 border-[#DCA54C] z-20 cursor-pointer"
               >
                 <Image
-                  src={cloudinary("lauls image/image copy 11.png")}
-                  alt="Lauls EV Logistics Truck"
+                  src={cloudinary("lauls image/image copy 4.png")}
+                  alt="Lauls Green Logistics Truck"
                   fill
                   priority
                   sizes="(max-width: 1024px) 50vw, 28vw"

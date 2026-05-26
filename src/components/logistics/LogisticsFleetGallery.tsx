@@ -7,10 +7,10 @@ import { cloudinary } from "@/utils/cloudinary";
 
 export default function LogisticsFleetGallery() {
   const images = [
-    { src: cloudinary("images/IMG_9993.JPG"), label: "Road Logistics", href: "/logistics" },
+    { src: cloudinary("images/IMG_9918.JPG"), label: "Road Logistics", href: "/logistics" },
     { src: cloudinary("images/IMG_9978.JPG"), label: "Rail Freight", href: "/logistics" },
-    { src: cloudinary("lauls image/image copy 4.png"), label: "Electric Fleet", href: "/logistics" },
-    { src: cloudinary("lauls image/image copy 9.png"), label: "Warehousing Hubs", href: "/logistics" }
+    { src: cloudinary("lauls image/image copy 11.png"), label: "Electric Fleet", href: "/logistics" },
+    { src: cloudinary("images/IMG_9934.JPG"), label: "Warehousing Hubs", href: "/logistics" }
   ];
 
   return (

@@ -51,7 +51,7 @@ export default function EVHero() {
             transition={{ delay: 0.2 }}
             className="text-white/80 text-base md:text-xl mb-8 md:mb-12 leading-relaxed font-light max-w-2xl"
           >
-            Pioneering the largest private rollout of heavy-duty electric commercial vehicles in India alongside LNG and CNG assets. We have committed to transitioning to a 100% diesel-free green fleet by 2027.
+            Pioneering the green transition in heavy industrial logistics by deploying zero-emission Electric Vehicles (EVs) for regional distribution, complemented by high-performance Liquefied Natural Gas (LNG) and Compressed Natural Gas (CNG) fleets for cleaner long-haul corridors. Our multi-fuel transition strategy targets a 100% diesel-free commercial fleet by 2027 to realize a long-term carbon-neutral vision.
           </motion.p>
 
           <motion.div

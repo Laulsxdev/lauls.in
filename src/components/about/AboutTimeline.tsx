@@ -117,7 +117,7 @@ export default function AboutTimeline() {
             <span className="text-[#DCA54C] font-display font-bold uppercase tracking-widest text-[10px]">Milestones</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-display font-bold text-[#0A1628]">
-            Three Decades of Progress
+            Nearly a Century of Progress
           </h2>
           <p className="text-gray-500 mt-4 font-light leading-relaxed max-w-lg mx-auto">
             A journey built on trust, precision, and an unrelenting pursuit of industrial excellence.
