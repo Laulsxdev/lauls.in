@@ -97,19 +97,19 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" onClick={(e) => handleLinkClick(e, "/")} className="flex items-center group">
+        <Link href="/" onClick={(e) => handleLinkClick(e, "/")} className="flex items-center group max-w-[65vw] sm:max-w-none">
           <Image
             src="/images/logo.png"
             alt="LAULS PRIVATE LIMITED"
             width={240}
             height={36}
             priority
-            className="h-9 w-auto object-contain transition-transform group-hover:scale-102"
+            className="h-8 sm:h-9 w-auto object-contain transition-transform group-hover:scale-102"
           />
         </Link>
 
         {/* Desktop Links */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
             <div
               key={link.name}
@@ -173,7 +173,7 @@ export default function Navbar() {
 
         {/* Mobile Menu Toggle */}
         <button
-          className="md:hidden text-white min-w-11 min-h-11 flex items-center justify-center"
+          className="lg:hidden text-white min-w-11 min-h-11 flex items-center justify-center"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle navigation menu"
           aria-expanded={isMobileMenuOpen}
@@ -205,7 +205,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-primary border-b border-white/10 overflow-hidden"
+            className="lg:hidden bg-primary border-b border-white/10 overflow-hidden"
             role="menu"
           >
             <div className="flex flex-col gap-1 p-6 max-h-[80vh] overflow-y-auto">

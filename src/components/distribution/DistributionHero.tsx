@@ -8,7 +8,7 @@ import { cloudinary } from "@/utils/cloudinary";
 
 export default function DistributionHero() {
   return (
-    <section className="relative w-full h-[100svh] min-h-[700px] flex flex-col justify-center overflow-hidden">
+    <section className="relative w-full min-h-[100svh] lg:h-[100svh] lg:min-h-[700px] flex flex-col justify-center overflow-hidden">
       {/* Immersive Background Layer */}
       <div className="absolute inset-0">
         <Image
@@ -24,8 +24,8 @@ export default function DistributionHero() {
       </div>
 
       {/* Content Container */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 mt-auto pt-24 pb-8 md:pb-12 flex-1 flex flex-col justify-center">
-        <div className="max-w-3xl">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 mt-auto pt-[104px] pb-8 md:pb-12 flex-1 flex flex-col">
+        <div className="max-w-3xl my-auto">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -66,29 +66,29 @@ export default function DistributionHero() {
               Request Quote
             </Link>
           </motion.div>
-
-          <motion.div 
-             initial={{ opacity: 0, y: 30 }}
-             animate={{ opacity: 1, y: 0 }}
-             transition={{ delay: 0.5 }}
-             className="grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-8 md:gap-16 pt-5 md:pt-8 border-t border-white/10 mt-auto"
-          >
-             <div className="flex flex-col">
-               <div className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-white drop-shadow-md">28+</div>
-               <div className="text-[#DCA54C] text-[10px] mt-2 uppercase tracking-widest font-bold">Years Experience</div>
-             </div>
-             
-             <div className="flex flex-col sm:border-l sm:border-white/10 sm:pl-8">
-               <div className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-white drop-shadow-md">500+</div>
-               <div className="text-[#DCA54C] text-[10px] mt-2 uppercase tracking-widest font-bold">Global Clients</div>
-             </div>
-             
-             <div className="flex flex-col col-span-2 sm:col-span-1 sm:border-l sm:border-white/10 sm:pl-8">
-               <div className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-white drop-shadow-md">50K+</div>
-               <div className="text-[#DCA54C] text-[10px] mt-2 uppercase tracking-widest font-bold">Tons Delivered</div>
-             </div>
-          </motion.div>
         </div>
+
+        <motion.div 
+           initial={{ opacity: 0, y: 30 }}
+           animate={{ opacity: 1, y: 0 }}
+           transition={{ delay: 0.5 }}
+           className="max-w-3xl w-full grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-8 md:gap-16 pt-5 md:pt-8 border-t border-white/10 mt-auto"
+        >
+           <div className="flex flex-col">
+             <div className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-white drop-shadow-md">28+</div>
+             <div className="text-[#DCA54C] text-[10px] mt-2 uppercase tracking-widest font-bold">Years Experience</div>
+           </div>
+           
+           <div className="flex flex-col sm:border-l sm:border-white/10 sm:pl-8">
+             <div className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-white drop-shadow-md">500+</div>
+             <div className="text-[#DCA54C] text-[10px] mt-2 uppercase tracking-widest font-bold">Global Clients</div>
+           </div>
+           
+           <div className="flex flex-col col-span-2 sm:col-span-1 sm:border-l sm:border-white/10 sm:pl-8">
+             <div className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-white drop-shadow-md">50K+</div>
+             <div className="text-[#DCA54C] text-[10px] mt-2 uppercase tracking-widest font-bold">Tons Delivered</div>
+           </div>
+        </motion.div>
       </div>
     </section>
   );

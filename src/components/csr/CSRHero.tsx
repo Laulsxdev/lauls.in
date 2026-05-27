@@ -7,7 +7,7 @@ import { cloudinary } from "@/utils/cloudinary";
 
 export default function CSRHero() {
   return (
-    <section className="relative w-full min-h-[100svh] flex flex-col justify-center overflow-hidden">
+    <section className="relative w-full min-h-[100svh] lg:h-[100svh] flex flex-col justify-center overflow-hidden">
       {/* Immersive Background Layer - using a green/nature or community focused image */}
       <div className="absolute inset-0">
         <Image
@@ -23,8 +23,8 @@ export default function CSRHero() {
       </div>
 
       {/* Content Container */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 mt-auto pt-24 pb-8 md:pb-12 flex-1 flex flex-col justify-center">
-        <div className="max-w-4xl">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 mt-auto pt-[104px] pb-8 md:pb-12 flex-1 flex flex-col">
+        <div className="max-w-4xl my-auto">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -72,29 +72,29 @@ export default function CSRHero() {
               Read CSR Report <ArrowRight size={16} className="text-[#0A1628] group-hover:translate-x-1 transition-transform" />
             </a>
           </motion.div>
-
-          <motion.div 
-             initial={{ opacity: 0, y: 30 }}
-             animate={{ opacity: 1, y: 0 }}
-             transition={{ delay: 0.5 }}
-             className="grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-8 md:gap-16 pt-5 md:pt-8 border-t border-white/10 mt-auto"
-          >
-             <div className="flex flex-col">
-               <div className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-white drop-shadow-md">₹5Cr+</div>
-               <div className="text-[#DCA54C] text-[10px] mt-2 uppercase tracking-widest font-bold">Annual CSR Investment</div>
-             </div>
-             
-             <div className="flex flex-col sm:border-l sm:border-white/10 sm:pl-8">
-               <div className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-white drop-shadow-md">10K+</div>
-               <div className="text-[#DCA54C] text-[10px] mt-2 uppercase tracking-widest font-bold">Lives Impacted</div>
-             </div>
-             
-             <div className="flex flex-col col-span-2 sm:col-span-1 sm:border-l sm:border-white/10 sm:pl-8">
-               <div className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-white drop-shadow-md">2M</div>
-               <div className="text-[#DCA54C] text-[10px] mt-2 uppercase tracking-widest font-bold">Trees Planted</div>
-             </div>
-          </motion.div>
         </div>
+
+        <motion.div 
+           initial={{ opacity: 0, y: 30 }}
+           animate={{ opacity: 1, y: 0 }}
+           transition={{ delay: 0.5 }}
+           className="max-w-4xl w-full grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-8 md:gap-16 pt-5 md:pt-8 border-t border-white/10 mt-auto"
+        >
+           <div className="flex flex-col">
+             <div className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-white drop-shadow-md">₹5Cr+</div>
+             <div className="text-[#DCA54C] text-[10px] mt-2 uppercase tracking-widest font-bold">Annual CSR Investment</div>
+           </div>
+           
+           <div className="flex flex-col sm:border-l sm:border-white/10 sm:pl-8">
+             <div className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-white drop-shadow-md">10K+</div>
+             <div className="text-[#DCA54C] text-[10px] mt-2 uppercase tracking-widest font-bold">Lives Impacted</div>
+           </div>
+           
+           <div className="flex flex-col col-span-2 sm:col-span-1 sm:border-l sm:border-white/10 sm:pl-8">
+             <div className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-white drop-shadow-md">2M</div>
+             <div className="text-[#DCA54C] text-[10px] mt-2 uppercase tracking-widest font-bold">Trees Planted</div>
+           </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -104,7 +104,7 @@ export default function Hero() {
         </motion.div>
       </AnimatePresence>
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 flex-1 flex flex-col justify-center">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 pt-8 flex-1 flex flex-col">
         <AnimatePresence mode="wait">
           <motion.div
             key={`content-${currentSlide}`}
@@ -112,7 +112,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="max-w-3xl"
+            className="max-w-3xl my-auto"
           >
             <motion.div
               initial={{ opacity: 0, width: 0 }}
