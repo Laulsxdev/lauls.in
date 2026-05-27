@@ -97,19 +97,19 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" onClick={(e) => handleLinkClick(e, "/")} className="flex items-center group max-w-[65vw] sm:max-w-none">
+        <Link href="/" onClick={(e) => handleLinkClick(e, "/")} className="flex items-center group max-w-[65vw] sm:max-w-none shrink-0">
           <Image
             src="/images/logo.png"
             alt="LAULS PRIVATE LIMITED"
             width={240}
             height={36}
             priority
-            className="h-8 sm:h-9 w-auto object-contain transition-transform group-hover:scale-102"
+            className="h-8 sm:h-9 w-auto object-contain transition-transform group-hover:scale-102 shrink-0"
           />
         </Link>
 
         {/* Desktop Links */}
-        <div className="hidden lg:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-4 xl:gap-8 shrink-0">
           {navLinks.map((link) => (
             <div
               key={link.name}
@@ -124,7 +124,7 @@ export default function Navbar() {
                   aria-expanded={isProductsOpen}
                   onKeyDown={handleProductsKeyDown}
                   onClick={() => setIsProductsOpen((prev) => !prev)}
-                  className="text-sm font-medium text-white/80 hover:text-white transition-colors flex items-center gap-1"
+                  className="text-xs xl:text-sm font-medium text-white/80 hover:text-white transition-colors flex items-center gap-1"
                 >
                   {link.name}
                   <ChevronDown
@@ -137,7 +137,7 @@ export default function Navbar() {
                 <Link
                   href={link.href}
                   onClick={(e) => handleLinkClick(e, link.href)}
-                  className={`text-sm font-medium transition-colors ${pathname === link.href ? 'text-accent' : 'text-white/80 hover:text-white'}`}
+                  className={`text-xs xl:text-sm font-medium transition-colors ${pathname === link.href ? 'text-accent' : 'text-white/80 hover:text-white'}`}
                 >
                   {link.name}
                 </Link>
@@ -146,7 +146,7 @@ export default function Navbar() {
           ))}
 
           {/* Phone & Mail */}
-          <div className="flex items-center gap-2 border-l border-white/20 pl-5">
+          <div className="hidden xl:flex items-center gap-2 border-l border-white/20 pl-5">
             <a
               href="tel:+911294098300"
               title="+91-129-4098300"
@@ -165,7 +165,7 @@ export default function Navbar() {
           <Link
             href="/contact"
             onClick={(e) => handleLinkClick(e, "/contact")}
-            className="px-6 py-2.5 bg-accent hover:bg-accent/90 text-white text-sm font-semibold rounded-full transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-accent/25"
+            className="px-4 py-2 xl:px-6 xl:py-2.5 bg-accent hover:bg-accent/90 text-white text-xs xl:text-sm font-semibold rounded-full transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-accent/25 whitespace-nowrap"
           >
             Contact Us
           </Link>
@@ -173,7 +173,7 @@ export default function Navbar() {
 
         {/* Mobile Menu Toggle */}
         <button
-          className="lg:hidden text-white min-w-11 min-h-11 flex items-center justify-center"
+          className="lg:hidden text-white min-w-11 min-h-11 flex items-center justify-center shrink-0"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle navigation menu"
           aria-expanded={isMobileMenuOpen}

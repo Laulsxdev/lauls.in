@@ -125,10 +125,6 @@ export default function Footer() {
             © {new Date().getFullYear()} Lauls Ltd. All Rights Reserved. | Est. 1933
           </p>
           <div className="flex gap-8 items-center">
-            <a href="https://wick.co.in" target="_blank" rel="noopener noreferrer" className="text-white/20 hover:text-accent text-xs transition-colors flex items-center gap-1.5 font-medium">
-              Powered by Wick Network
-            </a>
-            <span className="text-white/10 text-xs">|</span>
             <Link href="/privacy-policy" className="text-white/20 hover:text-white text-xs transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="text-white/20 hover:text-white text-xs transition-colors">Terms of Service</Link>
           </div>

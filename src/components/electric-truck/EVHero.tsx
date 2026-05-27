@@ -51,7 +51,7 @@ export default function EVHero() {
             transition={{ delay: 0.2 }}
             className="text-white/80 text-base md:text-xl mb-8 md:mb-12 leading-relaxed font-light max-w-2xl"
           >
-            Pioneering the green transition in heavy industrial logistics by deploying zero-emission Electric Vehicles (EVs) for regional distribution, complemented by high-performance Liquefied Natural Gas (LNG) and Compressed Natural Gas (CNG) fleets for cleaner long-haul corridors. Our multi-fuel transition strategy targets a 100% diesel-free commercial fleet by 2027 to realize a long-term carbon-neutral vision.
+            Pioneering sustainable heavy industrial logistics with zero-emission electric fleets for regional transport, and clean LNG/CNG corridors for green long-haul operations.
           </motion.p>
 
           <motion.div
