@@ -38,8 +38,15 @@ export default function FloatingContact() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Hide at the very top (Hero section), show after scrolling 300px
-      setIsVisible(window.scrollY > 300);
+      const scrollY = window.scrollY;
+      const scrollHeight = document.documentElement.scrollHeight;
+      const clientHeight = window.innerHeight;
+
+      // Show after scrolling 300px, but hide when reaching near the footer (within 500px of the bottom)
+      const isPastStart = scrollY > 300;
+      const isNearBottom = scrollY + clientHeight >= scrollHeight - 500;
+
+      setIsVisible(isPastStart && !isNearBottom);
     };
     
     // Check initial position on load
