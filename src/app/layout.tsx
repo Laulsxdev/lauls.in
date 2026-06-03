@@ -18,52 +18,55 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   metadataBase: new URL("https://lauls.in"),
   title: {
-    default: "LAULS PRIVATE LIMITED | Industrial Steel & EV Solutions",
+    default: "LAULS PRIVATE LIMITED | Logistics | Ferro Alloys | Railway Manufacturing | Since 1933",
     template: "%s | LAULS PRIVATE LIMITED",
   },
   description:
-    "Leading EV wire solutions and round wire manufacturers in India since 1933. Specialized in alloy steel wire rods, industrial steel manufacturing, and EV supply chain solutions.",
+    "LAULS PRIVATE LIMITED is an industrial powerhouse in India handling over 1,000,000 MT of Steel Logistics, distributing TATA Steel Ferro Alloys, and manufacturing RDSO Approved Railway Track Fasteners since 1933 from Faridabad.",
   keywords: [
-    "EV wire solutions",
-    "round wire manufacturers",
-    "alloy steel wire rods",
-    "industrial steel manufacturing",
-    "infrastructure steel solutions",
-    "EV supply chain manufacturing",
-    "industrial wire rod suppliers",
-    "sustainable steel manufacturing India",
-    "ferro alloys distributor india",
-    "RDSO approved manufacturer",
-    "tata steel authorized dealer",
-    "lauls ltd"
+    "Lauls Private Limited",
+    "ferro alloys India",
+    "TATA steel distributor",
+    "logistics Faridabad",
+    "railway manufacturing",
+    "steel handling",
+    "ferro chrome",
+    "ferro manganese",
+    "silico manganese",
+    "Railway Track Fastener Manufacturing",
+    "Fishplates",
+    "Elastic Rail Clips",
+    "SGCI Inserts",
+    "RDSO Approved Manufacturer"
   ],
   openGraph: {
-    title: "LAULS PRIVATE LIMITED | EV Wire Solutions & Industrial Steel Manufacturing",
+    title: "LAULS PRIVATE LIMITED — Logistics | Ferro Alloys | Railway Manufacturing",
     description:
-      "Leading EV wire solutions and round wire manufacturers in India since 1933. Specialized in alloy steel wire rods, industrial steel manufacturing, and EV supply chain solutions.",
+      "India's trusted industrial partner handling 1,000,000 MT of steel annually. ISO 9001:2015 & WAREX GOLD certified operations.",
     url: "https://lauls.in",
-    siteName: "Lauls Ltd",
+    siteName: "LAULS PRIVATE LIMITED",
     locale: "en_IN",
     type: "website",
     images: [
       {
-        url: cloudinary("images/IMG_9916.JPG"),
+        url: cloudinary("images/slider/Banner.jpg"),
         width: 1200,
         height: 630,
-        alt: "Lauls Ltd — Industrial Steel Manufacturing",
+        alt: "LAULS PRIVATE LIMITED - Mega Industrial Operations in Faridabad",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "LAULS PRIVATE LIMITED | EV Wire Solutions & Industrial Steel Manufacturing",
+    title: "LAULS PRIVATE LIMITED — Logistics | Ferro Alloys | Railway Manufacturing",
     description:
-      "Leading EV wire solutions and round wire manufacturers in India. Specialized in alloy steel wire rods and EV supply chain.",
-    images: [cloudinary("images/IMG_9916.JPG")],
+      "India's trusted industrial partner handling 1,000,000 MT of steel annually.",
+    images: [cloudinary("images/slider/Banner.jpg")],
   },
   robots: {
     index: true,
     follow: true,
+    nocache: false,
     googleBot: {
       index: true,
       follow: true,
@@ -80,9 +83,16 @@ export const metadata: Metadata = {
     shortcut: "/favicon.ico",
     apple: "/favicon.ico",
   },
+  verification: {
+    google: "PLACEHOLDER_FOR_GOOGLE_SITE_VERIFICATION",
+  },
   other: {
+    "GSTIN": "06AAACL3118P1ZF",
+    "contact": "+91-129-4098300",
     "geo.region": "IN-HR",
     "geo.placename": "Faridabad",
+    "geo.position": "28.3888;77.3175",
+    "ICBM": "28.3888, 77.3175",
   },
 };
 
@@ -153,6 +163,12 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${outfit.variable} h-full antialiased`}
     >
+      <head>
+        {/* Preconnects for ultra-fast asset loading at the edge */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://static.cloudflareinsights.com" />
+      </head>
       <body className="min-h-full flex flex-col bg-primary text-body relative group overflow-x-clip">
         <Schema />
         <script
