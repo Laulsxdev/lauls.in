@@ -97,6 +97,24 @@ export default function Schema() {
         }
       },
       {
+        "@type": "WebPage",
+        "@id": "https://lauls.in/#webpage",
+        "url": "https://lauls.in",
+        "name": "Lauls Private Limited | Industrial Steel & EV Solutions",
+        "isPartOf": {
+          "@id": "https://lauls.in/#website"
+        },
+        "about": {
+          "@id": "https://lauls.in/#organization"
+        },
+        "mentions": [
+          { "@type": "Thing", "name": "Steel Logistics" },
+          { "@type": "Thing", "name": "Ferro Alloys" },
+          { "@type": "Thing", "name": "Railway Track Fasteners" },
+          { "@type": "Thing", "name": "Electric Trucks" }
+        ]
+      },
+      {
         "@type": "WebSite",
         "@id": "https://lauls.in/#website",
         "url": "https://lauls.in",

@@ -75,16 +75,10 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  alternates: {
-    canonical: "https://lauls.in",
-  },
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
     apple: "/favicon.ico",
-  },
-  verification: {
-    google: "PLACEHOLDER_FOR_GOOGLE_SITE_VERIFICATION",
   },
   other: {
     "GSTIN": "06AAACL3118P1ZF",
@@ -165,6 +159,7 @@ export default function RootLayout({
     >
       <head>
         <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#DCA54C" />
         {/* Preconnects for ultra-fast asset loading at the edge */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

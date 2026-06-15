@@ -2,11 +2,17 @@ import type { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: {
-      userAgent: "*",
-      allow: "/",
-      disallow: ["/_next/", "/api/"],
-    },
+    rules: [
+      {
+        userAgent: "*",
+        allow: "/",
+        disallow: ["/_next/", "/api/"],
+      },
+      {
+        userAgent: ["GPTBot", "ChatGPT-User", "Google-Extended", "PerplexityBot", "Claude-Web", "anthropic-ai", "Omgilibot", "Omgili", "FacebookBot", "cohere-ai", "OAI-SearchBot"],
+        allow: "/",
+      }
+    ],
     sitemap: "https://lauls.in/sitemap.xml",
   };
 }
