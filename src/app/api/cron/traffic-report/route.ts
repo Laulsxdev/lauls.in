@@ -2,6 +2,7 @@ import { NextRequest } from "next/server";
 import { Resend } from "resend";
 
 export const dynamic = "force-dynamic";
+export const runtime = "edge";
 
 // Initialize Resend with API key if present
 const resendApiKey = process.env.RESEND_API_KEY;
@@ -122,6 +123,7 @@ export async function GET(request: NextRequest) {
     const cfZoneId = process.env.CLOUDFLARE_ZONE_ID;
     const cfApiToken = process.env.CLOUDFLARE_API_TOKEN;
     const recipientEmail = process.env.REPORT_RECIPIENT_EMAIL || "info@lauls.in";
+    const recipients = recipientEmail.split(",").map((email) => email.trim()).filter(Boolean);
 
     let trafficData = [];
     let isMock = false;
@@ -274,7 +276,7 @@ export async function GET(request: NextRequest) {
       try {
         const sendResult = await resend.emails.send({
           from: "Lauls Analytics <reporting@lauls.in>",
-          to: recipientEmail,
+          to: recipients,
           subject: emailSubject,
           html: emailHtml,
           attachments: [
@@ -290,7 +292,7 @@ export async function GET(request: NextRequest) {
         }
         
         emailSent = true;
-        emailResponseInfo = `Email sent successfully via Resend to ${recipientEmail}. ID: ${sendResult.data?.id}`;
+        emailResponseInfo = `Email sent successfully via Resend to ${recipients.join(", ")}. ID: ${sendResult.data?.id}`;
       } catch (err: any) {
         console.error("Resend delivery failed:", err);
         emailResponseInfo = `Failed to send email via Resend: ${err.message}`;
@@ -311,7 +313,7 @@ export async function GET(request: NextRequest) {
       },
       email: {
         sent: emailSent,
-        recipient: recipientEmail,
+        recipient: recipients,
         info: emailResponseInfo,
       },
       isMock,
