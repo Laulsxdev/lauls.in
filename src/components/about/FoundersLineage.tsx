@@ -64,9 +64,9 @@ export default function FoundersLineage() {
   const dot3Opacity = useTransform(scrollYProgress, [0.7, 1], [0.3, 1]);
 
   return (
-    <section id="heritage" ref={targetRef} className="relative bg-[#FFFCF8] h-[300vh] w-full">
+    <section id="heritage" ref={targetRef} className="relative bg-[#FFFCF8] h-[300dvh] w-full">
       {/* Sticky container that pins to the screen */}
-      <div className="sticky top-0 h-screen flex flex-col overflow-hidden pt-28 lg:pt-36 pb-12 w-full max-w-[100vw]">
+      <div className="sticky top-0 h-[100dvh] flex flex-col overflow-hidden pt-28 lg:pt-36 pb-12 w-full max-w-[100vw]">
         
         {/* Fixed Header with Badge and Dots (Always visible at the top) */}
         <div className="w-full max-w-[1200px] mx-auto px-6 lg:px-12 flex justify-between items-center shrink-0 z-20">

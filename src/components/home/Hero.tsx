@@ -71,7 +71,7 @@ export default function Hero() {
   return (
     <section className="relative w-full min-h-[100dvh] overflow-hidden bg-primary flex flex-col pt-24 pb-8">
       {/* Background Image Slider */}
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode="wait" initial={false}>
         <motion.div
           key={currentSlide}
           initial={{ opacity: 0 }}
@@ -105,7 +105,7 @@ export default function Hero() {
       </AnimatePresence>
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 pt-8 flex-1 flex flex-col">
-        <AnimatePresence mode="wait">
+        <AnimatePresence mode="wait" initial={false}>
           <motion.div
             key={`content-${currentSlide}`}
             initial={{ opacity: 0, y: 30 }}
@@ -178,7 +178,7 @@ export default function Hero() {
 
       {/* Stats Grid Overlay - Pinned to bottom within hero */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 mt-auto pb-6">
-        <AnimatePresence mode="wait">
+        <AnimatePresence mode="wait" initial={false}>
           <motion.div
             key={`stats-${currentSlide}`}
             initial={{ opacity: 0, y: 20 }}

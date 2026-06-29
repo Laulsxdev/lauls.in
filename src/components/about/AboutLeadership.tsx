@@ -134,7 +134,7 @@ export default function AboutLeadership() {
 
         {/* 3 Secondary Leaders */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <AnimatePresence mode="popLayout">
+          <AnimatePresence>
             {remainingLeaders.map((member) => (
               <motion.div 
                 layout
