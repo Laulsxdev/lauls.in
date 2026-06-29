@@ -93,7 +93,7 @@ export default function LogisticsPrecisionTubes() {
           >
             <Image
               src={cloudinary("images/IMG_9988.JPG")}
-              alt=""
+              alt="Specialized handling for precision steel tubes"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover object-center transition-transform duration-700 group-hover:scale-105"

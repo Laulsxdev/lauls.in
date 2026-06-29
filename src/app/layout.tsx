@@ -4,6 +4,8 @@ import "./globals.css";
 import { cloudinary } from "@/utils/cloudinary";
 import FloatingContact from "@/components/FloatingContact";
 import Schema from "@/components/seo/Schema";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
+import { Suspense } from "react";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -88,64 +90,11 @@ export const metadata: Metadata = {
     "geo.position": "28.3888;77.3175",
     "ICBM": "28.3888, 77.3175",
   },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "",
+  }
 };
 
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What logistics services does Lauls Private Limited provide?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We provide end-to-end logistics solutions, ensuring reliable supply chains and operational efficiency for massive industrial cargo, managing over 500,000 MT of transport annually.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you supply heavy alloy steel rounds?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We operate extensive stockyards dedicated to distributing heavy alloy steel, precision tubes, and rounds to meet diverse industrial manufacturing requirements.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Which ferro alloys do you trade and supply?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "As the authorized distributor of TATA Steel Ferro Alloys & Minerals in Northern India, we supply high-quality ferro chrome, ferro manganese, and other essential minerals.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is your approach to sustainable transport?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We are pioneering sustainable transport with our expanding fleet of electric trucks, significantly reducing carbon footprints.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What are your capabilities in precision tubes?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We offer dedicated handling and storage for specialized precision pipes, employing flawless concentric engineering for critical systems.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What types of wire rods do you offer?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We supply high-grade mild, alloy, and stainless steel wire rods that are optimized for precise drawing, complex fabrication, and aerospace or power sector applications.",
-      },
-    },
-  ],
-};
-
-const faqJsonLdString = JSON.stringify(faqJsonLd);
 
 export default function RootLayout({
   children,
@@ -166,11 +115,11 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://static.cloudflareinsights.com" />
       </head>
       <body className="min-h-full flex flex-col bg-primary text-body relative group overflow-x-clip">
+        <Suspense fallback={null}>
+          <GoogleAnalytics />
+        </Suspense>
         <Schema />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: faqJsonLdString }}
-        />
+
         {children}
         <FloatingContact />
       </body>

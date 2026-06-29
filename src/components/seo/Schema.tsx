@@ -129,6 +129,74 @@ export default function Schema() {
         "publisher": {
           "@id": "https://lauls.in/#organization"
         }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lauls.in/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lauls.in"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Logistics",
+            "item": "https://lauls.in/logistics"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Products",
+            "item": "https://lauls.in/products"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Distribution",
+            "item": "https://lauls.in/distribution"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://lauls.in/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What logistics services does Lauls Private Limited provide?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We provide end-to-end logistics solutions, ensuring reliable supply chains and operational efficiency for massive industrial cargo, managing over 500,000 MT of transport annually."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you supply heavy alloy steel rounds?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We operate extensive stockyards dedicated to distributing heavy alloy steel, precision tubes, and rounds to meet diverse industrial manufacturing requirements."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which ferro alloys do you trade and supply?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "As the authorized distributor of TATA Steel Ferro Alloys & Minerals in Northern India, we supply high-quality ferro chrome, ferro manganese, and other essential minerals."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is your approach to sustainable transport?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We are pioneering sustainable transport with our expanding fleet of electric trucks, significantly reducing carbon footprints."
+            }
+          }
+        ]
       }
     ]
   };

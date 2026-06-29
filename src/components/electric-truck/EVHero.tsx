@@ -14,7 +14,7 @@ export default function EVHero() {
       <div className="absolute inset-0">
         <Image
           src={cloudinary("lauls image/image copy 10.png")}
-          alt=""
+          alt="Electric logistics truck fleet by Lauls Private Limited"
           fill
           sizes="100vw"
           quality={90}

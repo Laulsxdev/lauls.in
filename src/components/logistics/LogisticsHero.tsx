@@ -13,7 +13,7 @@ export default function LogisticsHero() {
       <div className="absolute inset-0">
         <Image
           src={cloudinary("lauls image/Screenshot 2026-05-12 at 8.21.18 PM.png")}
-          alt=""
+          alt="Heavy logistics and transportation fleet by Lauls Private Limited"
           fill
           sizes="100vw"
           quality={90}

@@ -259,7 +259,7 @@ export default function ProductsPage() {
       <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden">
         <Image
           src={cloudinary("lauls image/Screenshot 2026-05-12 at 8.22.04 PM.png")}
-          alt=""
+          alt="Industrial product range including ferro alloys and steel rounds by Lauls"
           fill
           sizes="100vw"
           className="object-cover object-center"

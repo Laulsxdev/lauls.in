@@ -13,7 +13,7 @@ export default function DistributionHero() {
       <div className="absolute inset-0">
         <Image
           src={cloudinary("lauls image/Screenshot 2026-05-12 at 8.23.33 PM.png")}
-          alt=""
+          alt="Premium steel distribution by Lauls Private Limited"
           fill
           sizes="100vw"
           quality={90}

@@ -12,7 +12,7 @@ export default function CSRHero() {
       <div className="absolute inset-0">
         <Image
           src={cloudinary("images/savan.jpg")}
-          alt=""
+          alt="Corporate Social Responsibility initiatives by Lauls Private Limited"
           fill
           sizes="100vw"
           quality={90}

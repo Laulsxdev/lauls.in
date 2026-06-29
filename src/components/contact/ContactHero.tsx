@@ -9,7 +9,7 @@ export default function ContactHero() {
     <section className="relative w-full h-[60vh] md:h-[65vh] bg-[#0A1628] overflow-hidden flex items-center">
       <Image
         src={cloudinary("images/business-goals.jpg")}
-        alt=""
+        alt="Contact Lauls Private Limited for industrial partnerships"
         fill
         sizes="100vw"
         className="object-cover object-center opacity-40 mix-blend-overlay"
